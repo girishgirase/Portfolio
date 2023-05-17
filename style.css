@@ -1,0 +1,517 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');  Poppins*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+html {
+    font: 62.5%;
+    overflow-x: hidden;
+    
+}
+
+/* here is background-color and text color */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* section text is arranged here */
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+/* the header section is having it's position at fixed placed and so on.... */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; /* The z-index property specifies the stack order of an element. An element with greater stack order is always in front of an element with a lower stack order. */
+}
+
+/* the portfolio text format is used as logo for portfolio  */
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+/* text of navbar is arrange from here */
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+/* hover effect is used for text */
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem; /* rem (short for “root-em”) */
+    color: var(--text-color);
+    display: none;
+}
+
+/* section home */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img img {
+    width: 30vw;
+}
+
+/* section - div - class  */
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+/* have given a space between <h3> tag text and para */
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+/* keeping dark color on Frontend Developer text */
+span {
+    color: var(--main-color);
+}
+
+/* for h1 tag */
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* for description of para which is after <h1> tag */
+.home-content p {
+    font-size: 1.2rem;
+}
+
+/* social-media icons design */
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 40%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 2rem 1.5rem 2rem 0;
+    transition: .5s ease;
+}
+
+/* hover affect on icons */
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* here is designed btn of CV */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+
+
+/* SKILLS SECTION */
+
+
+/* my skill section design */
+.heading {
+    /* padding-top: 20px; */
+    margin-bottom: 3rem;
+}
+
+/* heading of my skills */
+.heading {
+    text-align: center;
+    color: var(--text-color);
+    padding: .5rem;
+    position: relative;
+}
+
+/*  */
+.heading:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 100px;
+    background-color: var(--text-color);
+    border-radius: 2px;
+}
+
+/* skills-container section */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+}
+
+.skills h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* skills box designed */
+.skills-box {
+    padding: 1rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* hover effect design */
+.skills-box:hover > .skills-title:after, .skills-box:hover > .skills-title:before {
+    width: 35px;
+}
+
+/* hover effect on box imgs */
+.skills-box:hover .img{
+    transform: translateY(-10px);
+}
+
+/* title of skills is designed her */
+.skills-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+/* effect after design */
+.skills-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 2px 0 0 2px;
+    background-color: #2ecc71;
+    transition: .5s;
+}
+
+/* effect before design */
+.skills-title:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 0 2px 2px 0;
+    background-color: #2ecc71;
+    transition: .5s;
+}
+
+/* images are placed her and shape design */
+.img {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    border-radius: 45px;
+    background-color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+
+}
+
+/* images which were original were not in shaped and after this designed follow it is in shape and the light-weight shadow inside the images */
+.img:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 90px;
+    background: rgb(100, 100, 100, 0.5); /* RGBA(Red-Green-Blue-Alpha) */
+    border-radius: 45px 0 0 45px;
+}
+
+/* h3 tag title design */
+.skills-title h3 {
+    color: var(--text-color);
+    margin-top: 0.5rem;
+
+}
+
+
+/* icons is given in shape */
+.skills-icon {
+    width: 50px;
+    z-index: 2;
+}
+
+/* width is sit here for mobile screen sizing  */
+@media screen and (max-width: 990px) {
+    .skills-container{
+        grid-template-columns: repeat(2, 2fr);
+        padding: 2rem 50px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .skills-container{
+        grid-template-columns: 1fr;
+        
+    }
+}
+
+
+/* Project section designed */
+.projects{
+    background: var(--second-bg-color);
+}
+
+/* heading design  */
+.projects h2 {
+    /* margin-bottom: 4rem; */
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.projects-container .projects-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+
+.projects-box img {
+    width: 100%;
+    transition: .5s ease;
+} 
+
+.projects-box:hover img {
+    transform: scale(1.1);
+} 
+
+.projects-box .projects-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.projects-box:hover .projects-layer {
+    transform: translateY(0);
+}
+
+.projects-layer h4 {
+    font-size: 2rem;
+}
+
+.projects-layer p {
+    font-size: 1.2rem;
+    margin: .3rem 0 1rem;
+}
+
+.projects-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.projects-layer a i {
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+
+
+
+/* Designed of Contact page(footer) */
+
+.contact h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--second-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+
+/* Footer designed */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.footer-text p {
+    font-size: 1.3rem;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
